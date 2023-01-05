@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class NavComponent {
 
   activeBurguer = false;
-
+  counter = 0;
   constructor() {
 
   }
