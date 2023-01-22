@@ -1,7 +1,7 @@
 <div class="relative overflow-hidden rounded-lg" infinite-scroll (scrolled)="next()">
-  <ul class="relative mx-auto list-none white-space-nowrap overflow-x-scroll">
-    <li *ngFor="let image of images" class="relative inline-block">
-      <img [src]="image.url" class="relative w-full">
+  <ul class="relative mx-auto list-none white-space-nowrap overflow-x-scroll h-64 w-full">
+    <li *ngFor="let image of images" class="relative inline-block h-full w-64">
+      <img [src]="image.url" class="relative h-full w-full">
     </li>
   </ul>
 </div>
