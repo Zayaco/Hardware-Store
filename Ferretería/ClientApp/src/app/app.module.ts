@@ -6,20 +6,20 @@ import { AppRoutingModule } from '../app/app-routing.module'
 import { NotFoundComponent } from '../app/modules/shared/not-found/not-found.component'
 //import { TimeInterceptor } from './interceptors/time.interceptor';
 //import { TokenInterceptor } from './interceptors/token.interceptor';
-import { QuicklinkModule } from 'ngx-quicklink';
+// import { QuicklinkModule } from 'ngx-quicklink';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    QuicklinkModule,
+    // QuicklinkModule,
   ],
   providers: [
     //{
