@@ -17,8 +17,7 @@ import { TrackOrderComponent } from './pages/track-order/track-order.component';
 import { PurchaseProcessComponent } from './pages/purchase-process/purchase-process.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavComponent } from './components/nav/nav.component';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   imports: [
     CommonModule,
     WebsiteRoutingModule,
-    InfiniteScrollModule
+    SlickCarouselModule
   ]
 })
 export class WebsiteModule { }

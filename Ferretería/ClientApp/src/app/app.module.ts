@@ -8,6 +8,7 @@ import { NotFoundComponent } from '../app/modules/shared/not-found/not-found.com
 //import { TokenInterceptor } from './interceptors/token.interceptor';
 // import { QuicklinkModule } from 'ngx-quicklink';
 import { AppComponent } from './app.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     AppRoutingModule,
     // QuicklinkModule,
+    SlickCarouselModule
   ],
   providers: [
     //{

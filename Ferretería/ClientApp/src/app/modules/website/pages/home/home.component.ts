@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-home',
@@ -6,31 +7,32 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  images = [
-    { url: './../../assets/images/carousel_slide1.jpg' },
-    { url: './../../assets/images/carousel_slide2.jpg' },
-    { url: './../../assets/images/carousel_slide3.jpg' },
+  slides = [
+    { img: './../../../assets/images/carousel_slide1.jpg' },
+    { img: './../../../assets/images/carousel_slide2.jpg' },
+    { img: './../../../assets/images/carousel_slide3.jpg' }
   ];
 
-  currentIndex = 0;
+  slideConfig = {
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "dots": true,
+    "adaptiveHeight": true
+  };
 
-  ngOnInit() {
-    setInterval(() => {
-      this.next();
-    }, 2000);
+  slickInit(e: any) {
+    console.log('slick initialized');
   }
 
-  next() {
-    this.currentIndex++;
-    if (this.currentIndex === this.images.length) {
-      this.currentIndex = 0;
-    }
+  breakpoint(e: any) {
+    console.log('breakpoint');
   }
 
-  prev() {
-    this.currentIndex--;
-    if (this.currentIndex < 0) {
-      this.currentIndex = this.images.length - 1;
-    }
+  afterChange(e: any) {
+    console.log('afterChange');
+  }
+
+  beforeChange(e: any) {
+    console.log('beforeChange');
   }
 }
